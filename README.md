@@ -8,15 +8,15 @@ Device-state are bundle ( tgz ) used to fully restore or mirror a PaloAlto Netwo
 The script will connect to Panorama, lists every firewall connected to them and execute an API call to download their device-state in a local directory. It requires:
 - The Panorama FQDN or IP
 - A Panorama admin account & password
-- A super-user account & password on each firewall ( same login & password on each device )
+- A super-user account & password on each firewall ( same login & password on each device so please make it secure )
 - A host ( windows / linux ) & local directory path where the device-states will be saved
 
-# How to Run it
+## How to Run it
 ```
 pan-dev-state.py -pi <panorama_ip> -pl <panorama_api_login> -pp <panorama_api_password> -fl <fw_api_login> -fp <fw_api_password> -d <backup_directory>
 ```
 
-# How to restore a device state on a firewall
+## How to restore a device state on a firewall
 ```
 Firewall WebUI > Device > Setup > Operations > Import Device state
 ```
